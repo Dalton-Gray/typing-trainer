@@ -1,4 +1,5 @@
-symbolBank = ["a", "b", "c", "d", "e"];
+letters = "qwertyuiopasdfghjklzxcvbnm";
+symbolBank = letters.split("");
 target = symbolBank[Math.floor(Math.random()*symbolBank.length)];
 
 
