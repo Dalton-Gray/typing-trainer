@@ -30,7 +30,6 @@ function clearInput() {
 
 
 function nextSymbol() {
-    // window.alert("test");
     answer = document.getElementById("input").value
     console.log("answer & target before check: ", answer, target);
     console.log("answer before check: ", answer);
