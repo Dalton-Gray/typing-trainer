@@ -2,6 +2,9 @@ letters = "qwertyuiopasdfghjklzxcvbnm";
 symbolBank = letters.split("");
 target = symbolBank[Math.floor(Math.random()*symbolBank.length)];
 
+function setUp() {
+    document.getElementById("target-symbol").textContent = target;
+}
 
 function incorrect() {
     currentVal = parseInt(document.getElementById("incorrect").textContent);
@@ -19,7 +22,6 @@ function checkAnswer(target, answer) {
 }
 function updateTargetHtml(target) {
     document.getElementById("target-symbol").textContent = target;
-
 }
 function clearInput() {
     document.getElementById("input").value = '';
@@ -30,14 +32,16 @@ function clearInput() {
 function nextSymbol() {
     // window.alert("test");
     answer = document.getElementById("input").value
-    console.log(answer);
+    console.log("answer & target before check: ", answer, target);
+    console.log("answer before check: ", answer);
     if (checkAnswer(target, answer)) {
         correct();
     } else {
         incorrect();
     }
     target = symbolBank[Math.floor(Math.random()*symbolBank.length)];
-    updateTargetHtml(target)
-    clearInput()
+    updateTargetHtml(target);
+    console.log("updated target: ", target);
+    clearInput();
     console.log(target);
 }
