@@ -35,12 +35,12 @@ function nextSymbol() {
     console.log("answer before check: ", answer);
     if (checkAnswer(target, answer)) {
         correct();
+        target = symbolBank[Math.floor(Math.random()*symbolBank.length)];
+        updateTargetHtml(target);
+        console.log("updated target: ", target);
     } else {
         incorrect();
     }
-    target = symbolBank[Math.floor(Math.random()*symbolBank.length)];
-    updateTargetHtml(target);
-    console.log("updated target: ", target);
     clearInput();
     console.log(target);
 }
