@@ -1,4 +1,4 @@
-letters = "qwertyuiopasdfghjklzxcvbnm";
+letters = "qwertyuiopasdfghjklzxcvbnm"
 symbolBank = letters.split("");
 target = symbolBank[Math.floor(Math.random()*symbolBank.length)];
 
@@ -16,18 +16,17 @@ function correct() {
     document.getElementById("correct").textContent = currentVal +1;
 }
 
-
 function checkAnswer(target, answer) {
     return target == answer;
 }
+
 function updateTargetHtml(target) {
     document.getElementById("target-symbol").textContent = target;
 }
+
 function clearInput() {
     document.getElementById("input").value = '';
 }
-
-
 
 function nextSymbol() {
     answer = document.getElementById("input").value
